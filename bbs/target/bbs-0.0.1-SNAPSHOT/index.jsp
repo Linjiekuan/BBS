@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head><script type="text/javascript">
 window.onload=function(){
-	location.href="login";
+	location.href='login';
 }  /* 与congtroller建立联系，跳转到login.jsp */
 </script>
 <body>
-hello
+
 </body>
 </html>

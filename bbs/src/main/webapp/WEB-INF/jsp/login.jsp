@@ -7,10 +7,12 @@
 <title>登录页面</title>
 </head>
 <body>
-<form action="userLogin">
-<input id="username" type="text" placeholder="账号"/>
-<input id="password" type="password" placeholder="密码"/ >
-<br/><button type="submit"> 登录</button>
+<form method="post" name="formUser" action="userLogin" >
+<input id="username" type="text" placeholder="账号" name="username" />
+<br/>
+<input id="password" type="password" placeholder="密码" name="password" />
+<br/>
+<button type="submit">登录</button>
 </form>
 </body>
 </html>

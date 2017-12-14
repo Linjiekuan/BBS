@@ -13,8 +13,10 @@ import com.ljk.server.UserServer;
 import com.ljk.serverImpl.UserServerImpl;
 @Controller
 public class UserController {
+	@Autowired
 	@Qualifier("userServer")
 	private UserServer userServer;
+	
 	@RequestMapping(value="/login")
 	public String login(){
 		return "login";

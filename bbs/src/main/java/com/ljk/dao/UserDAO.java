@@ -10,5 +10,4 @@ public interface UserDAO {
 	//µÇÂ½ÑéÖ¤
 	public User userLogin(@Param("username") String username, 
 			@Param("password") String password); 
-	
 }
