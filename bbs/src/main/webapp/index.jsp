@@ -5,8 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-</head>
+</head><script type="text/javascript">
+window.onload=function(){
+	location.href='login';
+}  /* 与congtroller建立联系，跳转到login.jsp */
+</script>
 <body>
-    hello the world!
+
 </body>
 </html>

@@ -1,7 +1,6 @@
 package com.ljk.controller;
 import java.io.IOException;
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +15,19 @@ import com.ljk.serverImpl.UserServerImpl;
 public class UserController {
 	@Qualifier("userServer")
 	private UserServer userServer;
-	@RequestMapping(value="/useLogin")
+	@RequestMapping(value="/login")
+	public String login(){
+		return "login";
+	}
+	@RequestMapping(value="/userLogin")
 	public String userLogin(HttpServletRequest request, HttpServletResponse response){
 		User user = new User();
 		//user.setUsername(request.getParameter("username"));
 		//user.setPassword(request.getParameter("password"));
 		user = userServer.userLogin(request.getParameter("username"), request.getParameter("password"));
-		if(user != null){
-			return "test.jsp";
+		if(user!= null){
+			request.getSession().setAttribute("username", user.getUsername());
+			return "test";
 		}
 		else{
 			return "error";
