@@ -8,8 +8,20 @@ import com.ljk.server.*;
 public class UserServerImpl implements UserServer {
 	@Autowired  //自动注入，不用new一个
     private UserDAO userDao; 
+	/**
+     * 用户登录验证
+     * @return
+     */
 	public User userLogin(String username, String password) {
 		return userDao.userLogin(username, password);
 	}
+	/**
+     * 用户注册
+     * @return
+     */
+	public void userRegister(User user) {
+		userDao.userRegister(user);
+	}
+	
 
 }

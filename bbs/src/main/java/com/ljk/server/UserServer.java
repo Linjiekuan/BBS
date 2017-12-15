@@ -6,4 +6,9 @@ public interface UserServer {
      * @return
      */
 	public User userLogin(String username,String password);
+	/**
+     * ÓÃ»§×¢²á
+     * @return
+     */
+	public void userRegister(User user);
 }
